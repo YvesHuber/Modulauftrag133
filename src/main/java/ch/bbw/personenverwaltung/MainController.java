@@ -10,27 +10,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller
-@Scope("request")
+
 public class MainController {
-
-
-    @Autowired
-    public MainController() {
-
-    }
-
-    @PostConstruct
-    private void init() {
-
-    }
-
-    @PreDestroy
-    private void destroy() {
-    }
-
     @GetMapping("/")
-    public String index(Model model) {
+    public String index() {
 
         return "index";
     }
