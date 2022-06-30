@@ -19,10 +19,11 @@
             <br/>
             <h1>Personenverwaltung</h1>
 
-            <form action="#" th:action="@{/update}" th:object="${verwaltung}" method="post">
 <!--
-            <form action="#" th:action="@{/update/{id}(id = ${verwaltung.id})}" th:object="${verwaltung}" method="post">
+            <form action="#" th:action="@{/update}" th:object="${verwaltung}" method="post">
 -->
+
+            <form action="#" th:action="@{/update/{id}(id = ${verwaltung.id})}" th:object="${verwaltung}" method="post">
                 <div class="form-group">
                     <label for="vorname">Vorname</label>
                     <input type="text" class="form-control" id="vorname" th:field="*{vorname}"
@@ -70,12 +71,12 @@
 
                 <br>
 
-                <input type="submit" class="btn btn-primary"/>
+                <button type="submit" class="btn btn-primary">Senden</button>
             </form>
 
             <br>
 
-            <a href="/persons" class="btn btn-primary">Personenverwaltung</a>
+            <a href="/" class="btn btn-primary">Personenverwaltung</a>
 
         </div>
     </div>

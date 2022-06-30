@@ -2,34 +2,45 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Personenverwaltung</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Personenverwaltung" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Personenverwaltung"/>
 
     <!-- Bootstrap core CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"></head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
 </head>
 <body>
-<h1>Person erstellen</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <br/>
+            <h1>Person erstellen</h1>
 
-<form action="#" th:action="@{/create}" th:object="${person}" method="post">
-    <input id="name" type="text" name="Name" th:field="*{name}" />
-    <input id="vorname" type="text" name="Name" th:field="*{vorname}" />
-    <input id="email" type="email" name="Name" th:field="*{email}" />
-    <input id="geburtsdatum" type="date" name="Name" th:field="*{geburtsdatum}" />
-    <input id="size250" type="radio" name="size" th:field="*{geschlecht}" th:value="m" />
-    <label for="size250">250mm</label>
-    <input id="size320" type="radio" name="size" th:field="*{geschlecht}" th:value="f" />
-    <label for="size320">350mm</label>
+            <form action="#" th:action="@{/create}" th:object="${person}" method="post">
+                <input id="name" type="text" name="Name" th:field="*{name}"/>
+                <input id="vorname" type="text" name="Name" th:field="*{vorname}"/>
+                <input id="email" type="email" name="Name" th:field="*{email}"/>
+                <input id="geburtsdatum" type="date" name="Name" th:field="*{geburtsdatum}"/>
+                <input id="size250" type="radio" name="size" th:field="*{geschlecht}" th:value="m"/>
+                <label for="size250">m</label>
+                <input id="size320" type="radio" name="size" th:field="*{geschlecht}" th:value="f"/>
+                <label for="size320">f</label>
 
-    <input type="submit"/>
-</form>
+                <button type="submit" class="btn btn-primary">Erstellen</button>
+            </form>
 
+        </div>
+    </div>
+</div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 </body>
 </html>
