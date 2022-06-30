@@ -20,14 +20,47 @@
             <h1>Person erstellen</h1>
 
             <form action="#" th:action="@{/create}" th:object="${person}" method="post">
-                <input id="name" type="text" name="Name" th:field="*{name}"/>
-                <input id="vorname" type="text" name="Name" th:field="*{vorname}"/>
-                <input id="email" type="email" name="Name" th:field="*{email}"/>
-                <input id="geburtsdatum" type="date" name="Name" th:field="*{geburtsdatum}"/>
-                <input id="size250" type="radio" name="size" th:field="*{geschlecht}" th:value="m"/>
-                <label for="size250">m</label>
-                <input id="size320" type="radio" name="size" th:field="*{geschlecht}" th:value="f"/>
-                <label for="size320">f</label>
+                <div class="form-group">
+                    <label class="form-check-label" for="vorname">Vorname</label>
+                    <input class="form-control" id="vorname" type="text" name="Name" th:field="*{vorname}"/>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label class="form-check-label" for="name">Name</label>
+                    <input class="form-control" id="name" type="text" name="Name" th:field="*{name}"/>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label class="form-check-label" for="email">Email Adresse</label>
+                    <input class="form-control" id="email" type="email" name="Name" th:field="*{email}"/>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label class="form-check-label" for="geburtsdatum">Geburtsdatum</label>
+                    <input class="form-control" id="geburtsdatum" type="date" name="Name" th:field="*{geburtsdatum}"/>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label class="form-check-label" for="mann">Mann</label>
+                    <input class="form-check-input" id="mann" type="radio" name="size" th:field="*{geschlecht}" th:value="m"/>
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label class="form-check-label" for="frau">Frau</label>
+                    <input class="form-check-input" id="frau" type="radio" name="size" th:field="*{geschlecht}" th:value="f"/>
+                </div>
+
+                <br>
 
                 <button type="submit" class="btn btn-primary">Erstellen</button>
             </form>
