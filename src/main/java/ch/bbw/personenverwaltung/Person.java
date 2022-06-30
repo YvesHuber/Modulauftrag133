@@ -1,6 +1,8 @@
 package ch.bbw.personenverwaltung;
 
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -14,6 +16,7 @@ public class Person {
     private String vorname;
     private String email;
     @Temporal(TemporalType.DATE)
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private Date geburtsdatum;
     private char geschlecht;
 

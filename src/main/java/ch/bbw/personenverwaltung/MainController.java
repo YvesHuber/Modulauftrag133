@@ -57,10 +57,9 @@ public class MainController {
     }
     @PostMapping("/create")
     public String create(@ModelAttribute Person person, Model model){
+        System.out.println(person.getId());
+
         model.addAttribute("person", new Person());
-        System.out.println(person.getName());
-
-
         return "create";
     }
 
