@@ -8,7 +8,7 @@
   <meta name="description" content="Personenverwaltung" />
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" th:href="@{/bootstrap-4.1.3/css/bootstrap.min.css}"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"></head>
 </head>
 <body>
 <div class="container">
@@ -17,16 +17,45 @@
       <br/>
       <h1>Personenverwaltung</h1>
 
-      <!--<h2 th:text="${verwaltung.vorname}"></h2>-->
-      <!--<input th:text="">-->
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter name">
+        </div>
 
-      <!--<h2 th:text="${verwaltung.name}"></h2>-->
-      <!--<input th:text="">-->
+        <div class="form-group">
+          <label for="lastname">Lastname</label>
+          <input type="text" class="form-control" id="lastname" placeholder="Enter lastname">
+        </div>
 
-      <!--<h2 th:text="${verwaltung.email}"></h2>-->
-      <!--<input th:text="">-->
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
 
-      <a href="/persons">Personenverwaltung</a>
+        <div class="form-group">
+          <label for="birthdate">Birthdate</label>
+          <input id="birthdate" class="form-control" type="date" />
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="male">
+          <label class="form-check-label" for="male">
+            Male
+          </label>
+        </div>
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="gender" id="female" checked>
+          <label class="form-check-label" for="female">
+            Female
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+
+      <a href="/persons" class="btn btn-primary">Personenverwaltung</a>
 
       </div>
     </div>
@@ -37,8 +66,7 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script th:src="@{/bootstrap-4.1.3/js/bootstrap.min.js}"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 </body>
 </html>
