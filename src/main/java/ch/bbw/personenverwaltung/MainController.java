@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class MainController {
 
-    /*private final DataRepository dataRepository;
+    private DataRepository dataRepository;
 
     @Autowired
     public MainController(DataRepository dataRepository) {
@@ -29,15 +29,15 @@ public class MainController {
 
     @GetMapping("/persons")
     public String persons(Model model) {
-        model.addAttribute("persons", dataRepository.getAllPersons());
+        model.addAttribute("persons", dataRepository.findAll());
         return "persons";
     }
 
     @GetMapping("/person/{id}")
     public String person(@PathVariable long id, Model model) {
 
-        model.addAttribute("person", dataRepository.getallPersonById(id));
+        model.addAttribute("person", dataRepository.findAllById(id));
         return "person";
     }
-*/
+
 }

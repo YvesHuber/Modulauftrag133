@@ -1,22 +1,21 @@
 package ch.bbw.personenverwaltung;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import java.sql.Date;
-import java.time.LocalDate;
+
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class Person {
 
+    @Id
+    @GeneratedValue(strategy= GenerationType.AUTO)
     private long id;
     private String name;
     private String vorname;
     private String email;
+    @Temporal(TemporalType.DATE)
     private Date geburtsdatum;
     private char geschlecht;
-
-    public Person(int id, String name, String vorname, String email, Date geburtsdatum, char geschlecht) {
-    }
 
     public Person(long id, String name, String vorname, String email, Date geburtsdatum, char geschlecht) {
         this.id = id;
@@ -27,8 +26,10 @@ public class Person {
         this.geschlecht = geschlecht;
     }
 
+    public Person() {
 
-    @Id
+    }
+
     public Long getId() {
         return id;
     }
