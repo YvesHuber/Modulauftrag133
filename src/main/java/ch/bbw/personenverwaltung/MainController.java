@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class MainController {
 
-    private final DataRepository dataRepository;
+    /*private final DataRepository dataRepository;
 
     @Autowired
     public MainController(DataRepository dataRepository) {
@@ -39,5 +39,5 @@ public class MainController {
         model.addAttribute("person", dataRepository.getallPersonById(id));
         return "person";
     }
-
+*/
 }

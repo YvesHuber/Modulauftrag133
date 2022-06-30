@@ -2,6 +2,7 @@ package ch.bbw.personenverwaltung;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.sql.Date;
 import java.time.LocalDate;
 
 @Entity
@@ -11,14 +12,13 @@ public class Person {
     private String name;
     private String vorname;
     private String email;
-    private LocalDate geburtsdatum;
+    private Date geburtsdatum;
     private char geschlecht;
 
-    public Person() {
-        this(0, "", "", "", LocalDate.of(0000,00,00), 'x');
+    public Person(int id, String name, String vorname, String email, Date geburtsdatum, char geschlecht) {
     }
 
-    public Person(long id, String name, String vorname, String email, LocalDate geburtsdatum, char geschlecht) {
+    public Person(long id, String name, String vorname, String email, Date geburtsdatum, char geschlecht) {
         this.id = id;
         this.name = name;
         this.vorname = vorname;
@@ -61,11 +61,11 @@ public class Person {
         this.email = email;
     }
 
-    public LocalDate getGeburtsdatum() {
+    public Date getGeburtsdatum() {
         return geburtsdatum;
     }
 
-    public void setGeburtsdatum(LocalDate geburtsdatum) {
+    public void setGeburtsdatum(Date geburtsdatum) {
         this.geburtsdatum = geburtsdatum;
     }
 
