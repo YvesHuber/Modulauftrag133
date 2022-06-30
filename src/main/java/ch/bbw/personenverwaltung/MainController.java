@@ -50,16 +50,25 @@ public class MainController {
         return "personenverwaltung";
     }
 
+    @PostMapping("/update")
+    public String update(@ModelAttribute Person person) {
+
+        dataRepository.save(person);
+
+        return "update";
+    }
+
     @GetMapping("/create")
-    public String getcreate(Model model){
+    public String getcreate(Model model) {
         model.addAttribute("person", new Person());
+
         return "create";
     }
+
     @PostMapping("/create")
-    public String create(@ModelAttribute Person person, Model model){
+    public String create(@ModelAttribute Person person, Model model) {
         model.addAttribute("person", new Person());
         System.out.println(person.getName());
-
 
         return "create";
     }
