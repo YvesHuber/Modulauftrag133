@@ -36,7 +36,7 @@ public class MainController {
     @GetMapping("/person/{id}")
     public String person(@PathVariable long id, Model model) {
 
-        model.addAttribute("person", dataRepository.findAllById(id));
+        model.addAttribute("person", dataRepository.findById(id));
         return "person";
     }
 
