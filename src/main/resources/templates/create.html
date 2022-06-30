@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Person erstellen</h1>
+
+<form action="#" th:action="@{/create}" th:object="${person}" method="post">
+    <input id="name" type="text" name="Name" th:field="*{name}" />
+    <input id="vorname" type="text" name="Name" th:field="*{vorname}" />
+    <input id="email" type="email" name="Name" th:field="*{email}" />
+    <input id="geburtsdatum" type="date" name="Name" th:field="*{geburtsdatum}" />
+    <input id="size250" type="radio" name="size" th:field="*{geschlecht}" th:value="m" />
+    <label for="size250">250mm</label>
+    <input id="size320" type="radio" name="size" th:field="*{geschlecht}" th:value="f" />
+    <label for="size320">350mm</label>
+
+    <input type="submit"/>
+</form>
+</body>
+</html>
