@@ -58,6 +58,14 @@ public class MainController {
         return "update";
     }
 
+/*    @PostMapping("/update/{id}")
+    public String create(@PathVariable Long id, @ModelAttribute Person person){
+        person.setId(id);
+        System.out.println(person.getId());
+        dataRepository.save(person);
+        return "redirect:/person";
+    }*/
+
     @GetMapping("/create")
     public String getcreate(Model model) {
         model.addAttribute("person", new Person());

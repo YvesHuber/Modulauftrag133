@@ -20,6 +20,9 @@
             <h1>Personenverwaltung</h1>
 
             <form action="#" th:action="@{/update}" th:object="${verwaltung}" method="post">
+<!--
+            <form action="#" th:action="@{/update/{id}(id = ${verwaltung.id})}" th:object="${verwaltung}" method="post">
+-->
                 <div class="form-group">
                     <label for="vorname">Vorname</label>
                     <input type="text" class="form-control" id="vorname" th:field="*{vorname}"
@@ -27,7 +30,6 @@
                 </div>
 
                 <br>
-
                 <div class="form-group">
                     <label for="name">Nachname</label>
                     <input type="text" class="form-control" id="name" th:field="*{name}"
@@ -54,14 +56,16 @@
 
                 <div class="form-check">
                     <label class="form-check-label" for="mann">Mann</label>
-                    <input class="form-check-input" type="radio" name="geschlecht" id="mann" th:field="*{geschlecht}" th:value="m">
+                    <input class="form-check-input" type="radio" name="geschlecht" id="mann" th:field="*{geschlecht}"
+                           th:value="m">
                 </div>
 
                 <br>
 
                 <div class="form-check">
                     <label class="form-check-label" for="frau">Frau</label>
-                    <input class="form-check-input" type="radio" name="geschlecht" id="frau" th:field="*{geschlecht}" th:value="f">
+                    <input class="form-check-input" type="radio" name="geschlecht" id="frau" th:field="*{geschlecht}"
+                           th:value="f">
                 </div>
 
                 <br>
