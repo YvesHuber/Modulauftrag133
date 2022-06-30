@@ -30,14 +30,22 @@ public class MainController {
     @GetMapping("/persons")
     public String persons(Model model) {
         model.addAttribute("persons", dataRepository.findAll());
+
         return "persons";
     }
 
-    @GetMapping("/person/{id}")
+    /*@GetMapping("/person/{id}")
     public String person(@PathVariable long id, Model model) {
-
         model.addAttribute("person", dataRepository.findById(id));
+
         return "person";
+    }*/
+
+    @GetMapping("/personenverwaltung/{id}")
+    public String personenverwaltung(@PathVariable long id, Model model) {
+        model.addAttribute("verwaltung", dataRepository.findById(id));
+
+        return "personenverwaltung";
     }
 
 }
