@@ -23,18 +23,30 @@
                 <h2 th:text="${person.vorname}"></h2>
                 <h2 th:text="${person.name}"></h2>
                 <h2 th:text="${person.email}"></h2>
-                <a th:href="@{/personenverwaltung/{id}(id = ${person.id})}" class="btn btn-primary">bearbeiten</a>
+<!--                <div class="row">
+                    <div class="col-1">-->
+                        <a th:href="@{/personenverwaltung/{id}(id = ${person.id})}"
+                           class="btn btn-warning">Bearbeiten</a>
+<!--                    </div>
 
-                <form action="#" th:action="@{/delete/{id}(id = ${person.id})}" th:object="${person}" method="post">
-                    <button type="submit" class="btn btn-primary">Löschen</button>
-                </form>
+
+                    <div class="col-1">-->
+                        <form action="#" th:action="@{/delete/{id}(id = ${person.id})}" th:object="${person}"
+                              method="post">
+                            <button type="submit" class="btn btn-danger">Löschen</button>
+                        </form>
+<!--
+                    </div>
+
+                </div>
+-->
 
                 <br>
             </div>
 
             <br>
 
-            <a th:href="@{/create}" class="btn btn-primary">Neue Person erstellen</a>
+            <a th:href="@{/create}" class="btn btn-success">Neue Person erstellen</a>
 
         </div>
     </div>
