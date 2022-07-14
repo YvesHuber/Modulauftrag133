@@ -50,19 +50,26 @@
 
                 <div class="form-group">
                     <label class="form-check-label" for="mann">Mann</label>
-                    <input class="form-check-input" id="mann" type="radio" name="size" th:field="*{geschlecht}" th:value="m"/>
+                    <input class="form-check-input" id="mann" type="radio" name="size" th:field="*{geschlecht}"
+                           th:value="m"/>
                 </div>
 
                 <br>
 
                 <div class="form-group">
                     <label class="form-check-label" for="frau">Frau</label>
-                    <input class="form-check-input" id="frau" type="radio" name="size" th:field="*{geschlecht}" th:value="f"/>
+                    <input class="form-check-input" id="frau" type="radio" name="size" th:field="*{geschlecht}"
+                           th:value="f"/>
                 </div>
 
                 <br>
 
                 <button type="submit" class="btn btn-success">Erstellen</button>
+
+                <br><br>
+
+                <a href="/" class="btn btn-primary">Personenverwaltung</a>
+
             </form>
 
         </div>

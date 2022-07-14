@@ -23,23 +23,49 @@
                 <h2 th:text="${person.vorname}"></h2>
                 <h2 th:text="${person.name}"></h2>
                 <h2 th:text="${person.email}"></h2>
-<!--                <div class="row">
-                    <div class="col-1">-->
+                <div class="row">
+                    <div class="col-md-1 col-sm-1">
                         <a th:href="@{/personenverwaltung/{id}(id = ${person.id})}"
                            class="btn btn-warning">Bearbeiten</a>
-<!--                    </div>
+                    </div>
 
+                    <div class="col-md-1 col-sm-1">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                            Löschen
+                        </button>
 
-                    <div class="col-1">-->
-                        <form action="#" th:action="@{/delete/{id}(id = ${person.id})}" th:object="${person}"
-                              method="post">
-                            <button type="submit" class="btn btn-danger">Löschen</button>
-                        </form>
-<!--
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Löschen?</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Möchten Sie diese Person wirklich löschen?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Schliessen
+                                        </button>
+                                        <form action="#"
+                                              th:action="@{/delete/{id}(id = ${person.id})}" th:object="${person}"
+                                              method="post">
+
+                                            <button type="submit" class="btn btn-danger">Löschen</button>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
--->
+
 
                 <br>
             </div>

@@ -3,6 +3,7 @@ package ch.bbw.personenverwaltung;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
+import javax.swing.*;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
