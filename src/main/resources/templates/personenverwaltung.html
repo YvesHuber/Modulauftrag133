@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Personenverwaltung</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Personenverwaltung"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <br/>
+            <h1>Personenverwaltung</h1>
+
+            <!--
+                        <form action="#" th:action="@{/update}" th:object="${verwaltung}" method="post">
+            -->
+
+            <form action="#" th:action="@{/update/{id}(id = ${verwaltung.id})}" th:object="${verwaltung}" method="post">
+                <div class="form-group">
+                    <label for="vorname">Vorname</label>
+                    <input type="text" class="form-control" id="vorname" th:field="*{vorname}"
+                           placeholder="Geben Sie einen Vornamen ein">
+                </div>
+
+                <br>
+                <div class="form-group">
+                    <label for="name">Nachname</label>
+                    <input type="text" class="form-control" id="name" th:field="*{name}"
+                           placeholder="Geben Sie einen Namen ein">
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label for="emaileingabe">Email Adresse</label>
+                    <input type="email" class="form-control" id="emaileingabe" th:field="*{email}"
+                           aria-describedby="emailHelp"
+                           placeholder="Enter email">
+                </div>
+
+                <br>
+
+                <div class="form-group">
+                    <label for="geburtsdatum">Geburtsdatum</label>
+                    <input id="geburtsdatum" class="form-control" type="date" th:field="*{geburtsdatum}"/>
+                </div>
+
+                <br>
+
+                <div class="form-check">
+                    <label class="form-check-label" for="mann">Mann</label>
+                    <input class="form-check-input" type="radio" name="geschlecht" id="mann" th:field="*{geschlecht}"
+                           th:value="m">
+                </div>
+
+                <br>
+
+                <div class="form-check">
+                    <label class="form-check-label" for="frau">Frau</label>
+                    <input class="form-check-input" type="radio" name="geschlecht" id="frau" th:field="*{geschlecht}"
+                           th:value="f">
+                </div>
+
+                <br>
+
+                <button type="submit" class="btn btn-success">Bestätigen</button>
+
+                <br><br>
+
+                <a href="/" class="btn btn-primary">Personenverwaltung</a>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+</body>
+</html>
